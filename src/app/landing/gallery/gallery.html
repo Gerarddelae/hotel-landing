@@ -1,0 +1,49 @@
+<section id="galeria" class="container mx-auto py-16 px-4">
+  <h2 class="text-4xl font-extrabold text-center text-primary-blue mb-8 fade-in">Galería del sistema</h2>
+
+  <div class="relative max-w-4xl mx-auto scale-in">
+    <div class="mx-auto relative overflow-visible flex items-center justify-center" style="aspect-ratio:16/9; max-height:28rem;">
+      <!-- decorative card background to give framed look without clipping image shadow -->
+      <div class="absolute inset-0 pointer-events-none flex items-center justify-center">
+        <div class="w-[98%] h-[96%] bg-white/5 rounded-xl blur-[0.5px]" aria-hidden="true"></div>
+      </div>
+
+      <!-- Single image bound to currentIndex for reliable centering -->
+      <img
+        [src]="images[currentIndex]"
+        alt="Hotel gallery"
+        class="max-w-[94%] max-h-[92%] w-auto h-auto object-contain object-center transition-opacity duration-500 ease-in-out rounded-lg shadow-2xl bg-white"
+        loading="lazy" />
+    </div>
+
+    <button 
+      (click)="prev()"
+      class="absolute left-4 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white hover:scale-110 p-3 rounded-full shadow-lg transition-all duration-300 group">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-primary-blue group-hover:-translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
+      </svg>
+    </button>
+
+    <button 
+      (click)="next()"
+      class="absolute right-4 top-1/2 -translate-y-1/2 bg-white/90 hover:bg-white hover:scale-110 p-3 rounded-full shadow-lg transition-all duration-300 group">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-primary-blue group-hover:translate-x-1 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
+      </svg>
+    </button>
+
+    <!-- Indicators -->
+    <div class="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2">
+      @for (image of images; track $index) {
+        <button 
+          (click)="goTo($index)"
+          class="w-2 h-2 rounded-full transition-all duration-300"
+          [class.bg-white]="currentIndex === $index"
+          [class.w-8]="currentIndex === $index"
+          [class.bg-white/50]="currentIndex !== $index"
+          [attr.aria-label]="'Go to image ' + ($index + 1)">
+        </button>
+      }
+    </div>
+  </div>
+</section>

@@ -1,1 +1,71 @@
-/* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Gradients personalizados que no se pueden hacer con Tailwind directamente */
+@layer utilities {
+  .gradient-vertical {
+    background: linear-gradient(
+      180deg,
+      oklch(63.32% 0.24 31.68) 0%,
+      oklch(69.02% 0.277 332.77) 50%,
+      oklch(53.18% 0.28 296.97) 100%
+    );
+  }
+  
+  .gradient-horizontal {
+    background: linear-gradient(
+      90deg,
+      oklch(63.32% 0.24 31.68) 0%,
+      oklch(69.02% 0.277 332.77) 50%,
+      oklch(53.18% 0.28 296.97) 100%
+    );
+  }
+}
+
+/* Animaciones de scroll */
+@layer utilities {
+  .fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  }
+  
+  .fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .fade-in-left {
+    opacity: 0;
+    transform: translateX(-50px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  }
+  
+  .fade-in-left.visible {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  
+  .fade-in-right {
+    opacity: 0;
+    transform: translateX(50px);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  }
+  
+  .fade-in-right.visible {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  
+  .scale-in {
+    opacity: 0;
+    transform: scale(0.9);
+    transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+  }
+  
+  .scale-in.visible {
+    opacity: 1;
+    transform: scale(1);
+  }
+}

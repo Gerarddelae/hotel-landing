@@ -1,0 +1,51 @@
+<header class="w-full flex items-center justify-between py-4 px-6 bg-white/80 backdrop-blur-sm fixed top-0 left-0 right-0 z-50 shadow-sm">
+  <div class="flex items-center gap-4">
+    <a href="#inicio" class="flex items-center gap-2 text-2xl font-bold tracking-tight text-primary-blue hover:text-primary-blue-dark transition-colors">
+      <svg viewBox="0 0 400.461 400.461" fill="currentColor" class="w-9 h-9 md:w-9 md:h-9">
+        <path d="M363.183,140.661c-85.913,23.041-109.339,13.599-133.812,2.597c-2.822-13.106-26.66-23.626-57.081-25.428
+          c0.367-1.429,0.577-2.961,0.577-4.564c0-0.096-0.009-0.188-0.01-0.284c2.499-2.512,4.043-5.972,4.043-9.795
+          c0-7.667-6.219-13.887-13.893-13.887c-7.664,0-13.879,6.22-13.879,13.887c0,3.818,1.541,7.275,4.032,9.787
+          c-0.001,0.098-0.011,0.194-0.011,0.293c0,1.604,0.211,3.135,0.578,4.564c-32.412,1.92-57.363,13.739-57.363,28.038
+          c0,0.558,0.048,1.111,0.123,1.661c-0.024-0.013-0.05-0.025-0.074-0.038c0,0-2.876,3.007-6.214,6.542
+          c-2.099,1.937-4.05,3.962-5.852,6.062c-7.141-11.477-11.122-25.315-22.562-34.951C19,90.727-29.463,160.778,22.603,185.041
+          c7.399,3.521,17.728,9.009,26.595,15.518c-5.281,2.648-8.967,7.977-9.287,14.206c-0.239,1.815,0,3.715,0.633,5.57
+          c2.037,7.03,8.512,12.176,16.196,12.176c0.622,0,1.234-0.039,1.838-0.104c5.806-0.467,12.106-4.17,17.57-13.123
+          c9.453,18.464,29.7,33.102,55.159,39.847c-4.895,2.508-9.012,5.576-12.062,9.058c-10.756,4.56-17.379,10.793-17.379,17.669
+          c0,13.976,27.375,25.305,61.141,25.305c33.779,0,61.152-11.329,61.152-25.305c0-6.876-6.633-13.109-17.385-17.669
+          c-2.36-2.697-5.374-5.14-8.88-7.275c90.357-12.563,105.183-74.425,201.134-106.432C406.32,150.355,384.445,135.98,363.183,140.661z
+          M71.029,187.523c-15.962-12.769-45.612-19.846-46.192-36.544c-0.368-14.304,20.224-16.983,30.73-9.805
+          c10.475,6.442,16.079,17.24,23.878,25.392C75.165,173.045,72.269,180.099,71.029,187.523z M212.551,168.292
+          c-14.002,5.949-32.82,9.226-52.986,9.226c-31.716,0-54.717-7.012-64.628-15.095c1.201-1.278,2.405-2.552,3.505-3.713
+          c16.218,7.102,38.017,11.103,61.124,11.103c28.398,0,54.262-5.942,70.704-16.069c0.005,0.003,0.01,0.004,0.016,0.007
+          C229.392,158.42,222.631,164.009,212.551,168.292z"/>
+      </svg>
+      <span>Maguestic</span>
+    </a>
+  </div>
+
+  <nav class="hidden md:flex items-center gap-6">
+    <a href="#features" class="text-sm font-medium text-gray-700 hover:text-primary-blue transition-colors">Funciones</a>
+    <a href="#galeria" class="text-sm font-medium text-gray-700 hover:text-primary-blue transition-colors">Galería</a>
+    <a href="#integraciones" class="text-sm font-medium text-gray-700 hover:text-primary-blue transition-colors">Integraciones</a>
+    <a href="#testimonios" class="text-sm font-medium text-gray-700 hover:text-primary-blue transition-colors">Testimonios</a>
+    <a href="#faq" class="text-sm font-medium text-gray-700 hover:text-primary-blue transition-colors">FAQ</a>
+    <a href="#newsletter" class="text-sm font-medium text-gray-700 hover:text-primary-blue transition-colors">Newsletter</a>
+    <a href="#precios" class="text-sm font-medium text-gray-700 hover:text-primary-blue transition-colors">Precios</a>
+    <a href="#contacto" class="text-sm font-medium text-gray-700 hover:text-primary-blue transition-colors">Contacto</a>
+  </nav>
+
+    <div class="flex items-center gap-3">
+      <a href="http://localhost:4200/auth/login" target="_blank" rel="noopener noreferrer" class="text-sm font-medium text-gray-700 hover:text-primary-blue transition-colors">Login</a>
+      <a href="http://localhost:4200/auth/register" target="_blank" rel="noopener noreferrer" class="inline-flex items-center px-4 py-2 rounded-full text-sm font-medium text-white bg-gradient-to-r from-primary-blue to-primary-blue-light shadow hover:scale-105 transition-transform">Registrarse</a>
+
+      <!-- Dark mode toggle -->
+      <button (click)="toggleTheme()" aria-label="Toggle color mode" class="ml-2 inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/90 text-primary-blue hover:scale-105 transition-transform shadow">
+        <svg *ngIf="!isDark" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+          <path d="M10 2a.75.75 0 01.75.75V4a.75.75 0 01-1.5 0V2.75A.75.75 0 0110 2zM10 16a.75.75 0 01.75.75V18a.75.75 0 01-1.5 0v-1.25A.75.75 0 0110 16zM4.22 4.22a.75.75 0 011.06 0l.884.884a.75.75 0 11-1.06 1.06L4.22 5.28a.75.75 0 010-1.06zM14.834 14.834a.75.75 0 011.06 0l.884.884a.75.75 0 11-1.06 1.06l-.884-.884a.75.75 0 010-1.06zM2 10a.75.75 0 01.75-.75H4a.75.75 0 010 1.5H2.75A.75.75 0 012 10zm12 0a.75.75 0 01.75-.75H16a.75.75 0 010 1.5h-1.25A.75.75 0 0114 10zM4.22 15.78a.75.75 0 010-1.06l.884-.884a.75.75 0 011.06 1.06l-.884.884a.75.75 0 01-1.06 0zM14.834 5.166a.75.75 0 010-1.06l.884-.884a.75.75 0 111.06 1.06l-.884.884a.75.75 0 01-1.06 0zM10 5.5a4.5 4.5 0 100 9 4.5 4.5 0 000-9z" />
+        </svg>
+        <svg *ngIf="isDark" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+          <path d="M17.293 13.293A8 8 0 116.707 2.707a6 6 0 0010.586 10.586z" />
+        </svg>
+      </button>
+  </div>
+</header>

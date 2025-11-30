@@ -1,0 +1,33 @@
+/* Clases de colores para los pills */
+.pill-blue {
+  background-color: color-mix(in srgb, oklch(51.01% 0.274 263.83) 5%, transparent);
+  color: oklch(51.01% 0.274 263.83);
+}
+.pill-blue:hover {
+  background-color: color-mix(in srgb, oklch(51.01% 0.274 263.83) 15%, transparent);
+}
+
+.pill-violet {
+  background-color: color-mix(in srgb, oklch(53.18% 0.28 296.97) 5%, transparent);
+  color: oklch(53.18% 0.28 296.97);
+}
+.pill-violet:hover {
+  background-color: color-mix(in srgb, oklch(53.18% 0.28 296.97) 15%, transparent);
+}
+
+.pill-french {
+  background-color: color-mix(in srgb, oklch(47.66% 0.246 305.88) 5%, transparent);
+  color: oklch(47.66% 0.246 305.88);
+}
+.pill-french:hover {
+  background-color: color-mix(in srgb, oklch(47.66% 0.246 305.88) 15%, transparent);
+}
+
+.pill-red {
+  background-color: color-mix(in srgb, oklch(61.42% 0.238 15.34) 5%, transparent);
+  color: oklch(61.42% 0.238 15.34);
+}
+.pill-red:hover {
+  background-color: color-mix(in srgb, oklch(61.42% 0.238 15.34) 15%, transparent);
+}
+

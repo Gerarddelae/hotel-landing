@@ -1,0 +1,9 @@
+/* Estilos para iconos sociales con transiciones */
+.social-link path {
+  transition: fill 0.3s ease;
+  fill: oklch(70.9% 0.015 304.04);
+}
+
+.social-link:hover path {
+  fill: oklch(19.37% 0.006 300.98);
+}
