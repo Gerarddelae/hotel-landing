@@ -1,6 +1,17 @@
-<main class="w-full min-h-screen flex flex-col pt-13 md:pt-20">
+<main class="w-full min-h-screen flex flex-col pt-13 md:pt-20 dark:bg-[#101826]">
   <app-header></app-header>
   <app-hero></app-hero>
   <app-gallery></app-gallery>
   <app-sections></app-sections>
+
+  <!-- Scroll to top button -->
+  <button
+    (click)="scrollToTop()"
+    [class.opacity-0]="!showScrollTop"
+    [class.pointer-events-none]="!showScrollTop"
+    class="fixed right-6 bottom-6 z-50 bg-white-90 text-primary-blue w-12 h-12 rounded-full flex items-center justify-center shadow-lg transition-opacity duration-300 dark:bg-[#1a2332] dark:text-primary-blue-light">
+    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 15l7-7 7 7" />
+    </svg>
+  </button>
 </main>

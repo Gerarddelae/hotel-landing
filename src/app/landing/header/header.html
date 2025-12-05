@@ -1,4 +1,4 @@
-<header class="w-full flex items-center justify-between py-4 px-6 bg-white/80 backdrop-blur-sm fixed top-0 left-0 right-0 z-50 shadow-sm">
+<header class="w-full flex items-center justify-between py-4 px-6 bg-white-80 backdrop-blur-sm fixed top-0 left-0 right-0 z-50 shadow-sm dark:bg-[#101826]/90 dark:text-white dark:shadow-[#0c1219]/50">
   <div class="flex items-center gap-4">
     <a href="#inicio" class="flex items-center gap-2 text-2xl font-bold tracking-tight text-primary-blue hover:text-primary-blue-dark transition-colors">
       <svg viewBox="0 0 400.461 400.461" fill="currentColor" class="w-9 h-9 md:w-9 md:h-9">
@@ -23,23 +23,21 @@
     </a>
   </div>
 
-  <nav class="hidden md:flex items-center gap-6">
-    <a href="#features" class="text-sm font-medium text-gray-700 hover:text-primary-blue transition-colors">Funciones</a>
-    <a href="#galeria" class="text-sm font-medium text-gray-700 hover:text-primary-blue transition-colors">Galería</a>
-    <a href="#integraciones" class="text-sm font-medium text-gray-700 hover:text-primary-blue transition-colors">Integraciones</a>
-    <a href="#testimonios" class="text-sm font-medium text-gray-700 hover:text-primary-blue transition-colors">Testimonios</a>
-    <a href="#faq" class="text-sm font-medium text-gray-700 hover:text-primary-blue transition-colors">FAQ</a>
-    <a href="#newsletter" class="text-sm font-medium text-gray-700 hover:text-primary-blue transition-colors">Newsletter</a>
-    <a href="#precios" class="text-sm font-medium text-gray-700 hover:text-primary-blue transition-colors">Precios</a>
-    <a href="#contacto" class="text-sm font-medium text-gray-700 hover:text-primary-blue transition-colors">Contacto</a>
+    <nav class="hidden md:flex items-center gap-6">
+    <a href="#features" class="text-sm font-medium text-gray-700 hover:text-primary-blue transition-colors dark:text-gray-300 dark:hover:text-primary-blue-light">Funciones</a>
+    <a href="#galeria" class="text-sm font-medium text-gray-700 hover:text-primary-blue transition-colors dark:text-gray-300 dark:hover:text-primary-blue-light">Galería</a>
+    <a href="#integraciones" class="text-sm font-medium text-gray-700 hover:text-primary-blue transition-colors dark:text-gray-300 dark:hover:text-primary-blue-light">Integraciones</a>
+    <a href="#testimonios" class="text-sm font-medium text-gray-700 hover:text-primary-blue transition-colors dark:text-gray-300 dark:hover:text-primary-blue-light">Testimonios</a>
+    <a href="#precios" class="text-sm font-medium text-gray-700 hover:text-primary-blue transition-colors dark:text-gray-300 dark:hover:text-primary-blue-light">Precios</a>
+    <a href="#contacto" class="text-sm font-medium text-gray-700 hover:text-primary-blue transition-colors dark:text-gray-300 dark:hover:text-primary-blue-light">Contacto</a>
   </nav>
 
     <div class="flex items-center gap-3">
-      <a href="http://localhost:4200/auth/login" target="_blank" rel="noopener noreferrer" class="text-sm font-medium text-gray-700 hover:text-primary-blue transition-colors">Login</a>
-      <a href="http://localhost:4200/auth/register" target="_blank" rel="noopener noreferrer" class="inline-flex items-center px-4 py-2 rounded-full text-sm font-medium text-white bg-gradient-to-r from-primary-blue to-primary-blue-light shadow hover:scale-105 transition-transform">Registrarse</a>
+      <a href="http://localhost:4200/auth/login" target="_blank" rel="noopener noreferrer" class="text-sm font-medium text-gray-700 hover:text-primary-blue transition-colors dark:text-gray-200">Login</a>
+      <a href="http://localhost:4200/auth/register" target="_blank" rel="noopener noreferrer" class="inline-flex items-center px-4 py-2 rounded-full text-sm font-medium text-white bg-gradient-to-r from-primary-blue to-primary-blue-light shadow hover:scale-105 transition-transform dark:from-primary-blue-dark dark:to-primary-blue">Registrarse</a>
 
       <!-- Dark mode toggle -->
-      <button (click)="toggleTheme()" aria-label="Toggle color mode" class="ml-2 inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/90 text-primary-blue hover:scale-105 transition-transform shadow">
+      <button (click)="toggleTheme()" aria-label="Toggle color mode" class="ml-2 inline-flex items-center justify-center w-10 h-10 rounded-full bg-white-90 text-primary-blue hover:scale-105 transition-transform shadow dark:bg-[#1a2332] dark:text-yellow-300">
         <svg *ngIf="!isDark" xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
           <path d="M10 2a.75.75 0 01.75.75V4a.75.75 0 01-1.5 0V2.75A.75.75 0 0110 2zM10 16a.75.75 0 01.75.75V18a.75.75 0 01-1.5 0v-1.25A.75.75 0 0110 16zM4.22 4.22a.75.75 0 011.06 0l.884.884a.75.75 0 11-1.06 1.06L4.22 5.28a.75.75 0 010-1.06zM14.834 14.834a.75.75 0 011.06 0l.884.884a.75.75 0 11-1.06 1.06l-.884-.884a.75.75 0 010-1.06zM2 10a.75.75 0 01.75-.75H4a.75.75 0 010 1.5H2.75A.75.75 0 012 10zm12 0a.75.75 0 01.75-.75H16a.75.75 0 010 1.5h-1.25A.75.75 0 0114 10zM4.22 15.78a.75.75 0 010-1.06l.884-.884a.75.75 0 011.06 1.06l-.884.884a.75.75 0 01-1.06 0zM14.834 5.166a.75.75 0 010-1.06l.884-.884a.75.75 0 111.06 1.06l-.884.884a.75.75 0 01-1.06 0zM10 5.5a4.5 4.5 0 100 9 4.5 4.5 0 000-9z" />
         </svg>

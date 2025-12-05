@@ -1,4 +1,4 @@
-import { Component, OnInit, Inject, Renderer2 } from '@angular/core';
+import { Component, OnInit, Inject, Renderer2, ChangeDetectorRef } from '@angular/core';
 import { RouterModule } from '@angular/router';
 import { CommonModule, DOCUMENT, isPlatformBrowser } from '@angular/common';
 import { PLATFORM_ID } from '@angular/core';
@@ -15,7 +15,8 @@ export class HeaderComponent implements OnInit {
   constructor(
     private renderer: Renderer2,
     @Inject(DOCUMENT) private document: Document,
-    @Inject(PLATFORM_ID) private platformId: Object
+    @Inject(PLATFORM_ID) private platformId: Object,
+    private cd: ChangeDetectorRef
   ) {}
 
   ngOnInit(): void {
@@ -34,11 +35,17 @@ export class HeaderComponent implements OnInit {
   }
 
   toggleTheme() {
+    console.log('[Header] toggleTheme called. current isDark=', this.isDark);
+    if (!isPlatformBrowser(this.platformId)) return;
+
     if (this.isDark) {
       this.disableDark();
     } else {
       this.enableDark();
     }
+
+    // ensure template updates immediately
+    try { this.cd.detectChanges(); } catch (e) { /* noop */ }
   }
 
   private enableDark() {
